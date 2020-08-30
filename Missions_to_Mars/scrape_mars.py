@@ -1,3 +1,4 @@
+import pandas as pd
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 import time
@@ -13,37 +14,30 @@ def scrape_info():
     browser = init_browser()
 
     # Visit visitcostarica.herokuapp.com
-    url = "https://visitcostarica.herokuapp.com/"
+    url = "https://mars.nasa.gov/news"
     browser.visit(url)
 
     time.sleep(1)
 
     # Scrape page into Soup
     html = browser.html
-    soup = bs(html, "html.parser")
+    news_soup = bs(html, 'html.parser')
 
-    # Get the average temps
-    avg_temps = soup.find('div', id='weather')
+    slide_elem = news_soup.select_one('ul.item_list li.slide')
 
-    # Get the min avg temp
-    min_temp = avg_temps.find_all('strong')[0].text
+    news_title = slide_elem.find('div', class_='content_title').text
 
-    # Get the max avg temp
-    max_temp = avg_temps.find_all('strong')[1].text
+    news_p = slide_elem.find('div', class_='article_teaser_body').text
 
-    # BONUS: Find the src for the sloth image
-    relative_image_path = soup.find_all('img')[2]["src"]
-    sloth_img = url + relative_image_path
 
     # Store data in a dictionary
-    costa_data = {
-        "sloth_img": sloth_img,
-        "min_temp": min_temp,
-        "max_temp": max_temp
+    mars_data = {
+        "news_title": news_title,
+        "news_p": news_p,
     }
 
     # Close the browser after scraping
     browser.quit()
 
     # Return results
-    return costa_data
+    return mars_data

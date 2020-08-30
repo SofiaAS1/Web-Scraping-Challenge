@@ -24,8 +24,7 @@ def home():
 @app.route("/scrape")
 def scrape():
     mars = mongo.db.mars
-    # Run the scrape function
-    # mars_data = scrape_mars.scrape_info()
+   
     news_title = "NASA Engineers Checking InSight's Weather Sensors"
     news_p = "An electronics issue is suspected to be preventing the sensors from sharing their data about Mars weather with the spacecraft."
 

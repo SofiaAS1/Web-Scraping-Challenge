@@ -1,3 +1,7 @@
+h1 {
+font-weight: bold;
+}
+
 h2 {
     color:red;
 }
@@ -11,3 +15,6 @@ p {
     font-weight: bold;
     font-size: 36px;
   }
+.btn {
+background-color:rgb(207, 16, 16);
+}

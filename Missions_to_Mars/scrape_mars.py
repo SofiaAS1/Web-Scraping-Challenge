@@ -15,7 +15,7 @@ def scrape_info():
 
     url = "https://mars.nasa.gov/news"
     browser.visit(url)
-    time.sleep(1)
+    time.sleep(5)
     html = browser.html
     news_soup = bs(html, 'html.parser')
     slide_elem = news_soup.select_one('ul.item_list li.slide')
@@ -24,7 +24,6 @@ def scrape_info():
 
     url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url)
-    time.sleep(1)
     full_image_elem = browser.find_by_id('full_image')
     full_image_elem.click()
     more_info_element = browser.links.find_by_partial_text('more info')
@@ -36,7 +35,6 @@ def scrape_info():
 
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url)
-    time.sleep(1)
     mars_pic1 = browser.links.find_by_partial_text('Cerberus')
     mars_pic1.click()
     mars_pic1o = browser.links.find_by_partial_text('Open')
@@ -48,7 +46,6 @@ def scrape_info():
 
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url)
-    time.sleep(1)
     mars_pic2 = browser.links.find_by_partial_text('Schiaparelli')
     mars_pic2.click()
     mars_pic2o = browser.links.find_by_partial_text('Open')
@@ -60,7 +57,6 @@ def scrape_info():
     
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url)
-    time.sleep(1)
     mars_pic3 = browser.links.find_by_partial_text('Syrtis')
     mars_pic3.click()
     mars_pic3o = browser.links.find_by_partial_text('Open')
@@ -72,7 +68,6 @@ def scrape_info():
 
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url)
-    time.sleep(1)
     mars_pic4 = browser.links.find_by_partial_text('Valles')
     mars_pic4.click()
     mars_pic4o = browser.links.find_by_partial_text('Open')
@@ -81,7 +76,6 @@ def scrape_info():
     img_soup = bs(html, 'html.parser')
     img4_title = img_soup.find("h2", class_="title").text
     img4_url = img_soup.find("li").a['href']
-
 
 
     # Storing data in my dictionary

@@ -12,9 +12,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 # Route to render index.html template using data from Mongo
 @app.route("/")
 def home():
-    news_title = "NASA Engineers Checking InSight's Weather Sensors"
-    news_p = "An electronics issue is suspected to be preventing the sensors from sharing their data about Mars weather with the spacecraft."
-
+    
     # Find one record of data from the mongo database
     mission_data = mongo.db.mars.find_one()
 
@@ -27,7 +25,14 @@ def home():
 def scrape():
     mars = mongo.db.mars
     # Run the scrape function
-    mars_data = scrape_mars.scrape_info()
+    # mars_data = scrape_mars.scrape_info()
+    news_title = "NASA Engineers Checking InSight's Weather Sensors"
+    news_p = "An electronics issue is suspected to be preventing the sensors from sharing their data about Mars weather with the spacecraft."
+
+    mars_data = {
+    "news_title": news_title,
+    "news_p": news_p,
+    }
 
     # Update the Mongo database using update and upsert=True
     mars.update({}, mars_data, upsert=True)

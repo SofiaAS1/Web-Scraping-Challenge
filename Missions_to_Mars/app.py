@@ -27,10 +27,12 @@ def scrape():
    
     news_title = "NASA Engineers Checking InSight's Weather Sensors"
     news_p = "An electronics issue is suspected to be preventing the sensors from sharing their data about Mars weather with the spacecraft."
+    featured_image_url = "https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA08003_hires.jpg" 
 
     mars_data = {
     "news_title": news_title,
     "news_p": news_p,
+    "featured_image_url": featured_image_url,
     }
 
     # Update the Mongo database using update and upsert=True

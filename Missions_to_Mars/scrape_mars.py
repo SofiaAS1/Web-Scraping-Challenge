@@ -89,8 +89,8 @@ def scrape_info():
     df = tables[0]
     df.columns = ['Planet Profile:', 'Mars (The Red Planet)']
     df.set_index('Planet Profile:', inplace=True)
-    html_table_n = df.to_html()
-    html_table = html_table_n.replace('\n', '')
+    html_table = df.to_html()
+    # html_table = html_table_n.replace('\n', '')
 
     # Storing data in my dictionary
     mars_data = {

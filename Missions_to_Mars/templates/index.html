@@ -141,20 +141,19 @@
   <div class=col-lg-12></div></div>
 
 <div class="row">
-  <div class="col-lg-2"></div>
-<div class="col-lg-8 lg-secondary">
+  <div class="col-lg-4"></div>
+<div class="col-lg-4 lg-secondary">
   <hr>
   <h1 class="display-3">Scraped Mars Facts</h1>
   <hr>
   <div class="row">
     <div class="col-md-12">
       <div class="table">
-        {{mission.html_table}}
-      </div>
+        {{mission.html_table|safe}}
     </div>
     </div>
     </div>
-    <div class="col-lg-2"></div>
+    <div class="col-lg-4"></div>
 </div>
 
 

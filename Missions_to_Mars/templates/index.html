@@ -39,12 +39,12 @@
   <div class="col-lg-1"></div>
   <div class="col-lg-6 lg-secondary">
     <h1 class="display-4">Featured Mars Image</h1>
-    <img width= "900px" src="{{ mission.featured_image_url }}" alt="Featured Mars Image">
+    <img width= "750px" src="{{ mission.featured_image_url }}" alt="Featured Mars Image">
 </div>
 <div class="col-lg-1"></div>
 <div class="col-lg-3 lg-secondary">
   <h1 class="display-4">Mars Facts</h1>
-  <p>(for a scraped Mars Facts Table, see below...)</p>
+  <p>(for a Scraped Mars Facts table, see below...)</p>
   <div class="row">
     <div class="col-md-12">
       <div class="table-responsive">
@@ -88,11 +88,26 @@
                </tr>  
              </tbody>
              </table>
+            
 </div>
     </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-md-12">
+  <hr>
+  <h1 class="display-4">Scraped Mars Facts</h1>
+  <p></p>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table">
+        {{mission.html_table|safe}}
+    </div>
+    </div>
+    </div>
 <div class="col-lg-1"></div>
+</div>
+  </div>
 </div>
 
 <div class="row">
@@ -135,26 +150,14 @@
       </div>
 </div>
 <div class="col-lg-2"></div>
-</div>
-
 <div class="row">
   <div class=col-lg-12></div></div>
-
-<div class="row">
-  <div class="col-lg-4"></div>
-<div class="col-lg-4 lg-secondary">
-  <hr>
-  <h1 class="display-3">Scraped Mars Facts</h1>
-  <hr>
   <div class="row">
-    <div class="col-md-12">
-      <div class="table">
-        {{mission.html_table|safe}}
-    </div>
-    </div>
-    </div>
-    <div class="col-lg-4"></div>
+    <div class=col-lg-12></div></div>
+    <div class="row">
+      <div class=col-lg-12></div></div>
 </div>
+
 
 
 </body>

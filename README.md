@@ -55,5 +55,5 @@ An HTML file called 'index.html' was created that displayed all of the data in H
 A CSS file was created to add style elements to the HTML beyond the basic template provided (i.e make accents red)
 
 
-![Mission to Mars Site Img1.png](Images/Mission to Mars Site Img1.png)
-![Mission to Mars Site Img2.png](Images/Mission to Mars Site Img2.png)
+![Mission_to_Mars_Img1.png](Images/Mission_to_Mars_Img1.png)
+![Mission_to_Mars_Img2.png](Images/Mission_to_Mars_Img2.png)
